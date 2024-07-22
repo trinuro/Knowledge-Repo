@@ -93,7 +93,7 @@ Analyzing '0c67ac18f50c5e6b9398bfe1dc3e156163ba10ef'
 - As you can see, `hashid` is not able to detect the type of hash to a 100 percent confidence
 - I recommend that if this happens, you should try each hash mode, starting with the easiest hash to crack. In this case, it is `SHA-1`.
 3. Examples of hashes that are easy to crack `NTLM`, `MD5` and `SHA-1`
-4. Note that `hashid` github repo has not been updated for a long time. Hoever, it should be good enough to detect simple hashes 
+4. Note that `hashid` github repo has not been updated for a long time. However, it should be good enough to detect simple hashes 
 ## `hashcat --identify`
 1. `hashcat` has an option to identify hashes too. I use this as my second resort.
 2. To use hashcat to identify hashes,
