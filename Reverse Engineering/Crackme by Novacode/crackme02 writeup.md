@@ -284,8 +284,7 @@ xxd -s 0x201f -l 0x20 crackme02.64
 ```
 - The program will detect that the first byte is \\x00 and give us the flag.
 10. Or we can perform ROT -1 on the string to get the password (Or ROT 93) 
-![[Rot.png]] 
-![rot encoder](../../Images/Rot encoder N93.png)
+![rot encoder](../../Images/Rot.png)
 Output:
 ```
 o`rrvnqc0
